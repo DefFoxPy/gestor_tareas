@@ -2,22 +2,49 @@
 
 {% block content %}
 
-<main class="container py-5">
-	<section class="card  card-body">
+<main class="container mt-5">
+	<section class="row justify-content-center">
+		<!-- Título principal -->
 		<h1 class="display-1 text-center">Gestor de Tareas</h1>
-		<p>Texto que representa el home de mi aplicación de gestor de tareas</p>
-
-		<div class="text-center">
-			<a class="btn btn-secondary" href="{% url 'signin'%}">
-				Signin
-			</a>
-			<a class="btn btn-dark" href="{% url 'signup' %}">
-				Signup
-			</a>
-		</div>
+		<!-- Descripción -->
+		<p class="lead mb-5">Organiza tus actividades diarias de manera sencilla y eficiente</p>
+		<!-- Instrucciones -->
+		<div class="card shadow-sm mb-5">
+            <div class="card-body">
+                <h3 class="card-title mb-4 text-center">¿Cómo usar esta aplicación?</h3>
+                <ul class="list-unstyled text-start mx-auto" style="max-width: 400px;">
+                    <li class="mb-3">
+                        <span class="badge bg-primary rounded-circle me-2">1</span>
+                        Regístrate o inicia sesión
+                    </li>
+                    <li class="mb-3">
+                        <span class="badge bg-primary rounded-circle me-2">2</span>
+                        Crea tus tareas en <strong>"Create Task"</strong>
+                    </li>
+                    <li class="mb-3">
+                        <span class="badge bg-primary rounded-circle me-2">3</span>
+                        Consulta tus pendientes en <strong>"Tasks Pending"</strong>
+                    </li>
+                    <li>
+                        <span class="badge bg-primary rounded-circle me-2">4</span>
+                        Marca como completadas cuando las finalices
+                    </li>
+                </ul>
+            </div>
+    	</div>
+    	<!-- Llamado a la acción -->
+		<div class="mt-4">
+            <h5 class="mb-3">¿Primera vez aquí?</h5>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{% url 'signup' %}" class="btn btn-primary btn-lg px-4">
+                        <i class="bi bi-person-plus me-2"></i>Registrarse
+                    </a>
+                    <a href="{% url 'signin' %}" class="btn btn-outline-secondary btn-lg px-4">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+                    </a>
+                </div>
+            </div>
 	</section>
-
-	
 </main>
 
 {% endblock %}
