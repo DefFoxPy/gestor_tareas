@@ -1,4 +1,4 @@
-# DJANGOCRUD
+# Gestor Tareas
 
 App desarrollada en Django para gestionar tareas  
 
